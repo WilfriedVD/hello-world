@@ -1,6 +1,9 @@
 <?php
 
-$hello = "Hello, world!";
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+include_once 'secured/_variables.php';
 
 ?>
 
@@ -15,11 +18,18 @@ $hello = "Hello, world!";
 
    <body>
 
-      <?php echo $hello ?>
+     <!-- een punt wordt gebruikt om een bewerking te maken.
+     Bij een komma worden de twee strings gewoon tegen elkaar gezet.
+      -->
+
+
+      <?php echo $hello , ' Wilfried'; ?> <br/>
+      <?php print ($hello . ' ' . $voornaam . ' ' . $naam); ?>
+
 
 
       <address>
-        Copyright &copy; <?php echo date("Y"); ?>
+        Copyright &copy; <?php echo date('Y'); ?> Winbooks
       </address>
    </body>
 
